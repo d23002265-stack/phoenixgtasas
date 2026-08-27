@@ -1,0 +1,557 @@
+<!DOCTYPE html><html lang="uk"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix GTA</title>
+    <meta name="description" content="Phoenix GTA — найкращий український RolePlay проект. Реалістична карта України, унікальні системи, автопарк та голосовий чат. Приєднуйся до гри!">
+    <meta name="keywords" content="GTA, MTA, GTA San Andreas, GTA Ukraine, Phoenix GTA, RolePlay, RP, гта, мта, гта україна, український сервер, гра про україну, авентіс рп, ролеплей, український самп, kalyna rp, ukraine gta, gta online, мта україна, скачать гта україна, грати в гта онлайн, мультиплеєр, самп, samp, ukrainegta, ukraine gta, укр гта, гта україна, vrp, врп, mta, верба рп, verba rp, ukraine gta5, quant rp, квант рп, юкреїн гта5">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="" href="" type="">
+    <!-- Icons -->
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography,forms,aspect-ratio"></script>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .live-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #ff4d4d;
+            border-radius: 50%;
+            margin-right: 8px;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; } 50% { opacity: 0.3; }
+        }
+    </style>
+    
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div class="loader-content">
+            <h2 class="font-syncopate" style="font-size: 2rem; margin-bottom: 1rem;">Phoenix GTA</h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                
+            </div>
+            <div class="nav-links">
+                <a href="#" id="home-link" class="nav-link">
+                    <i data-lucide="home" class="nav-link-icon"></i>
+                    <span>Головна</span>
+                </a>
+                <a href="https://phoenixgta.mta.pp.ua/" class="https://phoenixgta.mta.pp.ua/" target="_blank" rel="https://phoenixgta.mta.pp.ua/">
+                    <i data-lucide="https://phoenixgta.mta.pp.ua/" class="https://phoenixgta.mta.pp.ua/"></i>
+                    <span>Форум</span>
+                </a>
+                <a href="#" class="nav-link js-show-unavailable-popup">
+                    <i data-lucide="store" class="nav-link-icon"></i>
+                    <span>Ігровий магазин</span>
+                </a>
+                <a href="#" class="nav-link js-show-unavailable-popup">
+                    <i data-lucide="book-open" class="nav-link-icon"></i>
+                    <span>WIKI</span>
+                </a>
+            </div>
+            <a href="" class="cta-button nav-btn js-show-unavailable-popup">
+                <i data-lucide="user"></i>
+                КАБІНЕТ
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div style="position: absolute; inset: 0; z-index: -2; opacity: 0.4;">
+            <img src="images/preview-background.png" alt="Background" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="hero-grid"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-new-title">Phoenix GTA</h1>
+            <h2 class="hero-new-subtitle">ОНЛАЙН ГРА ПРО УКРАЇНУ</h2>
+            <p class="hero-description">
+                <span>Phoenix GTA</span> — це більше, ніж просто гра. Це живий світ, де кожен крок має значення. Тут ти сам визначаєш свій шлях: від першої роботи до серйозної кар’єри, від звичайного життя до власної історії успіху. Об’єднуйся з іншими, будуй зв’язки, досягай цілей і формуй власну роль у цьому динамічному середовищі.
+            </p>
+                <div class="hero-online-status">
+                <div class="online-info">
+                    <i data-lucide="users"></i>
+                    <span>Гравців</span>
+                    <strong id="hero-online-count">30+</strong>
+                </div>
+                <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const heroOnlineCount = document.getElementById('hero-online-count');
+  const apiUrl = "https://aventis-online.pp.ua/api/data_1.json";
+
+  async function loadOnline() {
+    try {
+      const response = await fetch(apiUrl);
+      const data = await response.json();
+
+      const players = data.count;
+
+      if (heroOnlineCount && typeof players === "number") {
+        heroOnlineCount.innerText = players;
+      } else {
+        heroOnlineCount.innerText = "Офлайн";
+      }
+
+    } catch (error) {
+      console.error("Помилка:", error);
+      if (heroOnlineCount) {
+        heroOnlineCount.innerText = "Помилка";
+      }
+    }
+  }
+
+  loadOnline();
+  setInterval(loadOnline, 30000);
+
+});
+</script>
+                <a href="#howto" class="cta-button secondary-btn">
+                    <span>Приєднатися</span>
+                    <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                </a>
+            </div>
+            <div class="hero-buttons">
+                <a href="https://fex.net/uk/s/slztel0" class="cta-button primary-btn">
+                    <i data-lucide="monitor" style="width: 20px; height: 20px;"></i>
+                    <span>Почати ГРАТИ</span>
+                </a>
+                <a href="" class="cta-button secondary-btn">
+                    <span>ДІЗНАТИСЬ БІЛЬШЕ</span>
+                </a>
+            </div>
+            <div class="hero-windows-note">
+                <i class="fa-brands fa-windows" style="font-size: 14px;"></i>
+                <span data-lang-key="hero_windows_only">Доступно тільки для Windows.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОвна влада -->
+<section id="roles"  style="background: #0F0F16;; padding: 4rem 2rem;">
+    
+        
+      
+                
+         
+    </div>
+</section>
+
+    <!-- хто ми -->
+
+<section id="aventis-promo-wrapper">
+        <div class="info-side">
+            <h2 class="title">Phoenix <br><span>GTA</span></h2>
+            <p class="desc">
+                <strong>Phoenix GTA</strong> — це сучасний ігровий простір, де все залежить від твоїх рішень. Відкрите середовище, жива економіка та активна спільнота гравців створюють справжню атмосферу життя.
+            </p>
+
+<div class="grid">
+    <div class="item"><div class="icon-box ic-rp">RP</div> RolePlay режим</div>
+    <div class="item"><div class="icon-box ic-map"><i class="fa-solid fa-city"></i></div>Відкритий світ</div>
+    <div class="item"><div class="icon-box ic-mic"><i class="fa-solid fa-microphone"></i></div> Голосовий чат</div>
+    <div class="item"><div class="icon-box ic-users"><i class="fa-solid fa-handshake"></i></div> Багато гравців</div>
+    <div class="item"><div class="icon-box ic-upd"><i class="fa-solid fa-arrows-rotate"></i></div> Регулярні Оновлення</div>
+    <div class="item"><div class="icon-box ic-age">16+</div> Ком'юніті 16+</div>
+</div>
+</div>
+
+        <div class="slider-side">
+            <div class="main-img-box">
+                <img id="aventis-main" src="images/dsad.jpg" alt="Aventis RP Gameplay">
+            </div>
+            <div class="thumb-nav">
+                <button class="slider-btn" id="prevBtn">❮</button>
+                <div class="thumbs">
+                    <img class="t-item active" src="images/ffdfs.jpg" alt="Screenshot 1">
+                    <img class="t-item" src="images/dssds.jpg" alt="Screenshot 2">
+                    <img class="t-item" src="images/dsad.jpg" alt="Screenshot 3">
+                    <img class="t-item" src="images/npe.jpg" alt="Screenshot 4">
+                </div>
+                <button class="slider-btn" id="nextBtn">❯</button>
+            </div>
+        </div>
+    </section>
+    
+<section id="ar-howto">
+    <h2 class="how-title">Як почати гру в<br><span>Phoenix GTA</span>?</h2>
+
+    <div class="how-grid">
+        <div style="grid-column: 1;">
+            <div class="step-content">
+                <span class="step-label">Крок 1</span>
+                <h3 class="step-heading">Завантажте гру</h3>
+                <p class="step-desc">
+                    Завантаж фірмовий лаунчер - він сам встановить і налаштує все необхідне для швидкого старту.
+                </p>
+
+                <a href="https://fex.net/uk/s/obont7c" class="ar-btn btn-green js-show-unavailable-popup">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="https://fex.net/uk/s/obont7c" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d=""></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Завантажити лаунчер
+                </a>
+
+                <div class="step-footer">
+                    <span>Windows</span>
+                    <div class="footer-divider"></div>
+                    <span>Безкоштовно</span>
+                </div>
+
+                <div class="launcher-3d">
+                    <div class="launcher-shell" style="--rx: 8deg; --ry: -18deg;">
+                        <div class="launcher-frame">
+                            <span class="launcher-shine"></span>
+                            <img src="images/launcher.png" alt="Launcher" class="launcher-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="how-timeline">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+        </div>
+
+        <div class="dot-2-spacer" style="grid-column: 3; margin-top: 395px;">
+            <div class="step-content">
+                <span class="step-label">Крок 2</span>
+                <h3 class="step-heading">Вхід у гру</h3>
+                <p class="step-desc">
+                    Введіть свій нікнейм під час реєстрації у встановленому форматі <span class="nickname-accent">Ім'я Прізвище</span> у грі та натисніть кнопку "Зареєструватись".
+                </p>
+
+                <a href="https://aventis-online.pp.ua" class="ar-btn btn-grey">Правила сервера</a>
+
+                <div class="step-footer">
+                    <span>Швидкий старт</span>
+                    <div class="footer-divider"></div>
+                    <span>RolePlay</span>
+                </div>
+            </div>
+        </div>
+
+        <img src="images/bibikka.jpg" alt="Character" class="character-decor">
+    </div>
+
+    <script>
+        (function () {
+            const section = document.getElementById('ar-howto');
+            if (!section) return;
+
+            const launcher = section.querySelector('.launcher-shell');
+            const frame = section.querySelector('.launcher-frame');
+            if (!launcher || !frame) return;
+
+            const isCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            if (isCoarsePointer || prefersReducedMotion) return;
+
+            let rafId = null;
+            let currentX = 8;
+            let currentY = -18;
+            let targetX = 8;
+            let targetY = -18;
+
+            const animate = () => {
+                currentX += (targetX - currentX) * 0.14;
+                currentY += (targetY - currentY) * 0.14;
+
+                launcher.style.setProperty('--rx', currentX.toFixed(2) + 'deg');
+                launcher.style.setProperty('--ry', currentY.toFixed(2) + 'deg');
+
+                if (Math.abs(currentX - targetX) > 0.02 || Math.abs(currentY - targetY) > 0.02) {
+                    rafId = requestAnimationFrame(animate);
+                } else {
+                    rafId = null;
+                }
+            };
+
+            const queueAnimation = () => {
+                if (!rafId) rafId = requestAnimationFrame(animate);
+            };
+
+            frame.addEventListener('mouseenter', () => {
+                launcher.classList.add('is-hovered');
+            });
+
+            frame.addEventListener('mousemove', (event) => {
+                const rect = frame.getBoundingClientRect();
+                const px = (event.clientX - rect.left) / rect.width - 0.5;
+                const py = (event.clientY - rect.top) / rect.height - 0.5;
+
+                targetY = px * 26;
+                targetX = -py * 16;
+
+                queueAnimation();
+            });
+
+            frame.addEventListener('mouseleave', () => {
+                launcher.classList.remove('is-hovered');
+                targetX = 8;
+                targetY = -18;
+                queueAnimation();
+            });
+
+            launcher.style.setProperty('--rx', '8deg');
+            launcher.style.setProperty('--ry', '-18deg');
+        })();
+    </script>
+</section>
+
+
+<script>
+    (function() {
+        const downloadBtn = document.getElementById('downloadBtn');
+        const rulesBtn = document.getElementById('rulesBtn');
+        
+        function showToast(message) {
+            const existingToast = document.querySelector('.custom-toast');
+            if (existingToast) existingToast.remove();
+            
+            const toast = document.createElement('div');
+            toast.className = 'custom-toast';
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%) translateY(20px);
+                background: linear-gradient(135deg, #0F0F16, #0a0a10);
+                color: #f59e0b;
+                padding: 14px 28px;
+                border-radius: 50px;
+                font-size: 14px;
+                font-weight: 600;
+                font-family: 'Segoe UI', system-ui, sans-serif;
+                z-index: 10000;
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(245, 158, 11, 0.4);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                opacity: 0;
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                pointer-events: none;
+                letter-spacing: 0.3px;
+            `;
+            document.body.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.style.opacity = '1';
+                toast.style.transform = 'translateX(-50%) translateY(0)';
+            }, 10);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transform = 'translateX(-50%) translateY(20px)';
+                setTimeout(() => toast.remove(), 300);
+            }, 2500);
+        }
+        
+        if (downloadBtn) {
+            downloadBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => { this.style.transform = ''; }, 150);
+                showToast('📥 Завантаження розпочато! Лаунчер завантажиться за секунду');
+            });
+        }
+        
+        if (rulesBtn) {
+            rulesBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => { this.style.transform = ''; }, 150);
+                showToast('Відкриваються правила сервера...');
+            });
+        }
+        
+        const dots = document.querySelectorAll('.dot');
+        dots.forEach(dot => {
+            dot.addEventListener('mouseenter', () => {
+                dot.style.transform = 'scale(1.5)';
+                dot.style.transition = 'transform 0.2s';
+            });
+            dot.addEventListener('mouseleave', () => {
+                dot.style.transform = 'scale(1)';
+            });
+        });
+    })();
+</script>
+
+
+
+
+
+    <!-- Footer -->
+    <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <a href="/">
+                <img src="images/Gemini_Generated_Image_cr1psxcr1psxcr1p-removebg-preview (1).png" alt="Aventis RP Logo" class="footer-logo-img">
+            </a>
+        </div>
+        
+        <div class="footer-info-center">
+            <div class="footer-column">
+                <h3>Навігація</h3>
+                <a href="https://phoenixgta.mta.pp.ua/">Соц. мережі</a>
+                <a class="js-show-unavailable-popup" href="https://phoenixgta.mta.pp.ua/" target="_blank" rel="noopener noreferrer ">Форум</a>
+            </div>
+            <div class="footer-column">
+                <h3>Інформація</h3>
+                <a class="footer-column" href="/privacy-policy.html">Політика конфіденційності</a>
+            </div>
+            <div class="footer-column">
+                <h3>Контакти</h3>
+                <p>
+            
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="
+https://www.youtube.com/@phoenixgta2026" class="social-btn youtube-btn">
+                <img src="images/youtube.svg" alt="YouTube">
+                <span>YouTube</span>
+            </a>
+            <a href="https://www.tiktok.com/@phoenixgta?_r=1&_t=ZS-99CjqGuIYPF" class="social-btn tiktok-btn">
+                <img src="images/tiktok.svg" alt="TikTok">
+                <span>TikTok</span>
+            </a>
+            <a href="" class="social-btn telegram-btn">
+                <img src="images/telegram.svg" alt="Telegram">
+                <span>Telegram</span>
+            </a>
+            <a href="" class="social-btn instagram-btn">
+                <img src="images/instagram.svg" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+            <a href="https://discord.gg/GXCWsabdA" class="social-btn discord-btn">
+                <img src="images/discord.svg" alt="Discord">
+                <span>Discord</span>
+            </a>
+        </div>
+        <p class="footer-main-desc">
+            Phoenix GTA — це сучасний український RolePlay проєкт на платформі MTA, створений командою ентузіастів.<br>
+            Вас чекає динамічний ігровий світ, де кожна дія впливає на розвиток персонажа, а взаємодія з іншими гравцями формує унікальний ігровий досвід.
+        </p>
+    </div>
+    <div class="footer-bottom">
+        <p class="footer-description">
+            © 2026 Phoenix GTA. Всі права захищено.
+        </p>
+    </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="cookie-banner">
+    <div class="cookie-content">
+        <div class="cookie-icon">
+            <i class="fa-solid fa-cookie-bite"></i>
+        </div>
+        <div class="cookie-text">
+            <h3>Ми використовуємо Cookies</h3>
+            <p>Ми використовуємо файли cookie для покращення роботи сайту. Ви можете погодитися або відхилити їх. Детальніше у <a href="/privacy-policy.php" style="color: var(--accent-blue); text-decoration: underline;">Політиці конфіденційності</a>.</p>
+        </div>
+    </div>
+    <div class="cookie-buttons">
+        <button id="accept-cookies-btn" class="cta-button primary-btn">Погодитися</button>
+        <button id="reject-cookies-btn" class="cta-button secondary-btn">Відхилити</button>
+    </div>
+</div>
+
+<!-- Support Widget -->
+<div id="support-widget-container">
+    <a href="" class="support-widget" target="_blank" rel="noopener noreferrer">
+        <span class="support-text js-show-unavailable-popup">Виникли проблеми з грою?</span>
+        <span class="support-icon js-show-unavailable-popup"><i class="fa-solid fa-paper-plane"></i></span>
+    </a>
+</div>
+
+<!-- Analytics -->
+<script data-cfasync="false" src="js/email-decode.min.js"></script><script data-cfasync="false" src="js/email-decode.min_1.js"></script><script src="js/analytics.js"></script>
+    <!-- Unavailable Popup -->
+    <div id="unavailable-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-icon">
+                <i data-lucide="wrench"></i>
+            </div>
+            <h3 class="popup-title">Сторінка в розробці</h3>
+            <p class="popup-message">Ця функція наразі недоступна, але ми вже працюємо над цим!</p>
+            <button id="close-popup-btn" class="cta-button primary-btn" style="width: 100%; margin-top: 1.5rem;">
+                Зрозуміло, дякую!
+            </button>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+
+        // Плавний скрол до верху для кнопки "Головна"
+        const homeLink = document.getElementById('home-link');
+        if (homeLink) {
+            homeLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Логіка завантажувача та запуску анімацій
+        window.addEventListener('load', function() {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }
+            // Додаємо клас loaded, який запустить анімації в CSS
+            document.body.classList.add('loaded');
+        });
+    </script>
+        <script>
+function checkPassword() {
+    const input = document.getElementById("site-password").value;
+    const correctPassword = "Savv_Pell0";
+
+    if (input === correctPassword) {
+        document.getElementById("site-lock").style.display = "none";
+    } else {
+        document.getElementById("password-error").style.display = "block";
+    }
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18107496841"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18107496841');
+</script>
+
+
+<script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" data-cf-beacon="{" version":"2024.11.0","token":"85f51ce54de049729e3a45a1416ac5ba","r":1,"server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
+</body></html>
